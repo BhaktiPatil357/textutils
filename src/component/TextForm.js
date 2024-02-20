@@ -34,14 +34,14 @@ const [text, setText] = useState('Enter text here');
 <div className="mb-3">
   <textarea className="form-control" onChange={HandleOnChange} value={text} id="myBox" rows="6"></textarea>
   </div>
-  <button type="button" className="btn btn-secondary mx-2" onClick=  {HandleUpClick}>convert to upper case</button>
-  <button className="btn btn-secondary mx-2" onClick=  {HandleLoClick}>convert to lowercase</button>
-  <button className="btn btn-secondary mx-2" onClick=  {HandleClear}>clear text</button>
+  <button type="button" className="btn btn-secondary mx-2 my-1" onClick=  {HandleUpClick}>convert to upper case</button>
+  <button className="btn btn-secondary mx-2 my-1" onClick=  {HandleLoClick}>convert to lowercase</button>
+  <button className="btn btn-secondary mx-2 my-1" onClick=  {HandleClear}>clear text</button>
   <button type="button" onClick={speak} className="btn btn-secondary mx-2">Speak</button>
 
 <div className="container my-3">
         <h1>Summary</h1>
-      <p>{text.split(" ").length} words and {text.length} characters</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} words and {text.length} characters</p>
       <p>{0.008 * text.split(" ").length} Minutes to read</p>
       <h3>Preview</h3>
       <p>{text}</p>

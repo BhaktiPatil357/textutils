@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './component/Navbar';
 import TextForm from './component/TextForm';
-
+import About from './component/About';
 
 function App() {
   return (
